@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C9A76E" />
+      <stop offset="50%" stop-color="#B8965E" />
+      <stop offset="100%" stop-color="#A6844C" />
+    </linearGradient>
+  </defs>
+
+  <!-- Main Inner Circle -->
+  <circle cx="200" cy="200" r="177" fill="none" stroke="url(#gold)" stroke-width="2.2" />
+
+  <!-- Outer Decorative Arcs -->
+  <path d="M95 45 A187.5 187.5 0 0 1 379 256 M305 355 A187.5 187.5 0 0 1 21 144" fill="none" stroke="url(#gold)" stroke-width="1.1" stroke-linecap="round" />
+
+  <!-- Floral Leaf Clusters (Top-Right & Bottom-Left) -->
+  <path fill="url(#gold)" d="
+    M263 63 Q276 47 298 54 Q285 68 263 63Z
+    M263 63 Q287 68 292 92 Q268 85 263 63Z
+    M297 86 Q317 77 334 91 Q315 100 297 86Z
+    M297 86 Q317 99 317 124 Q298 110 297 86Z
+    M316 122 Q338 119 351 137 Q330 140 316 122Z
+    M316 122 Q332 139 325 161 Q311 144 316 122Z
+    M71 293 Q76 271 61 254 Q53 274 71 293Z
+    M71 293 Q58 275 37 279 Q50 295 71 293Z
+    M88 326 Q87 304 66 294 Q67 316 88 326Z
+    M88 326 Q70 311 51 321 Q68 334 88 326Z
+    M119 355 Q112 335 89 333 Q97 352 119 355Z
+    M119 355 Q99 349 86 368 Q107 371 119 355Z" />
+
+  <!-- Center Monogram "AS" -->
+  <text x="200" y="254" text-anchor="middle" font-family="&#39;Cormorant Garamond&#39;, &#39;Times New Roman&#39;, Times, Georgia, serif" font-size="158" letter-spacing="2" fill="url(#gold)">AS</text>
+</svg>

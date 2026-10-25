@@ -1,0 +1,144 @@
+import {
+  invitation as W
+} from "../src/settings.js";
+import {
+  n as e
+} from "./rolldown-runtime-Bh1tDfsg.js";
+import {
+  c as t,
+  o as n
+} from "./react-CC4f5wG5.js";
+import {
+  r
+} from "./gsap-BL2wBkID.js";
+var i = e(t(), 1),
+  a = {
+    card: `_card_varjt_1`,
+    digitWrap: `_digitWrap_varjt_9`,
+    digit: `_digit_varjt_9`,
+    label: `_label_varjt_31`
+  },
+  o = n();
+
+function s({
+  label: e,
+  value: t
+}) {
+  let n = (0, i.useRef)(null),
+    [s, c] = (0, i.useState)(t),
+    l = (0, i.useRef)(t);
+  (0, i.useEffect)(() => {
+    if (t === l.current) return;
+    let e = n.current;
+    if (!e) {
+      c(t), l.current = t;
+      return
+    }
+    r.to(e, {
+      y: -20,
+      opacity: 0,
+      duration: .25,
+      ease: `power2.in`,
+      onComplete: () => {
+        c(t), r.fromTo(e, {
+          y: 20,
+          opacity: 0
+        }, {
+          y: 0,
+          opacity: 1,
+          duration: .35,
+          ease: `power3.out`
+        })
+      }
+    }), l.current = t
+  }, [t]);
+  let u = String(s).padStart(2, `0`);
+  return (0, o.jsxs)(`div`, {
+    className: a.card,
+    children: [(0, o.jsx)(`div`, {
+      className: a.digitWrap,
+      children: (0, o.jsx)(`span`, {
+        ref: n,
+        className: a.digit,
+        children: u
+      })
+    }), (0, o.jsx)(`span`, {
+      className: a.label,
+      children: e
+    })]
+  })
+}
+var c = {
+    countdownSection: `_countdownSection_whetm_1`,
+    container: `_container_whetm_9`,
+    title: `_title_whetm_15`,
+    cardsContainer: `_cardsContainer_whetm_23`
+  },
+  l = new Date(W.dateTime).getTime(),
+  u = () => {
+    let e = (0, i.useRef)(null),
+      [t, n] = (0, i.useState)({
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      });
+    return (0, i.useEffect)(() => {
+      r.fromTo(e.current, {
+        opacity: 0,
+        scale: .95
+      }, {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        scrollTrigger: {
+          trigger: e.current,
+          start: `top 80%`
+        }
+      });
+      let t = setInterval(() => {
+        let e = l - new Date().getTime();
+        e > 0 ? n({
+          days: Math.floor(e / (1e3 * 60 * 60 * 24)),
+          hours: Math.floor(e % (1e3 * 60 * 60 * 24) / (1e3 * 60 * 60)),
+          minutes: Math.floor(e % (1e3 * 60 * 60) / (1e3 * 60)),
+          seconds: Math.floor(e % (1e3 * 60) / 1e3)
+        }) : (n({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        }), clearInterval(t))
+      }, 1e3);
+      return () => clearInterval(t)
+    }, []), (0, o.jsx)(`section`, {
+      className: c.countdownSection,
+      ref: e,
+      children: (0, o.jsxs)(`div`, {
+        className: c.container,
+        children: [(0, o.jsx)(`h2`, {
+          className: c.title,
+          children: W.countdownTitle
+        }), (0, o.jsxs)(`div`, {
+          className: c.cardsContainer,
+          children: [(0, o.jsx)(s, {
+            label: `Days`,
+            value: t.days
+          }), (0, o.jsx)(s, {
+            label: `Hours`,
+            value: t.hours
+          }), (0, o.jsx)(s, {
+            label: `Minutes`,
+            value: t.minutes
+          }), (0, o.jsx)(s, {
+            label: `Seconds`,
+            value: t.seconds
+          })]
+        })]
+      })
+    })
+  };
+export {
+  u as
+  default
+};
