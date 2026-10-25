@@ -1,2 +1,2 @@
-# invitation
-Wedding Invitation of Ankit and Sakshi
+# Invitation
+Wedding Invitation of Sakshi & Ankit.
