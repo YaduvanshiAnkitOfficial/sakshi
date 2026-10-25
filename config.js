@@ -38,7 +38,6 @@ window.INVITATION = {
   "gallery": [
     "media/IMG_7182_1_optimized_250.png"
   ],
-  "eventsTitle": "Wedding Events",
   "events": [
     {
       "title": "Wedding",
@@ -52,7 +51,6 @@ window.INVITATION = {
       "featured": true
     }
   ],
-  "familyTitle": "With Blessings From",
   "family": [
     {
       "label": "R.S.V.P.",
